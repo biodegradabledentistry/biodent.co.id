@@ -504,13 +504,12 @@ h3::after {
 
 .gallery-item img {
   width: 100%;
-  height: auto; /* Biarkan tinggi menyesuaikan proporsi asli */
-  object-fit: contain; /* Menampilkan gambar secara penuh tanpa terpotong */
-  object-position: center; /* Gambar terpusat */
-  display: block; /* Menghilangkan whitespace di bawah */
-  max-height: 300px; /* Batas tinggi maksimum untuk konsistensi */
-  transition: transform 0.5s ease; /* Transisi zoom halus */
-  padding: 10px; /* Padding untuk bingkai visual */
+  height: 250px; /* Atau sesuaikan */
+  object-fit: cover; /* Gambar akan memenuhi seluruh area */
+  object-position: center;
+  display: block;
+  padding: 0; /* Hapus padding agar seragam */
+  transition: transform 0.5s ease;
 }
 
 .gallery-item:hover img {
