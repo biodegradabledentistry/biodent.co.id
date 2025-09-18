@@ -607,31 +607,41 @@ h3::after {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
   margin-top: 50px;
-}
-.btn-beli-sekarang {
-    background-color: #28a745; /* Hijau eco-friendly, sesuai tema biodegradable */
+.btn-whatsapp {
+    background-color: #28a745; /* Hijau eco-friendly, sama dengan tombol "Pelajari Lebih Lanjut" */
     color: white; /* Teks putih untuk kontras */
     border: none; /* Tanpa border untuk tampilan clean */
-    padding: 12px 24px; /* Padding sedang untuk ukuran nyaman */
-    font-size: 16px; /* Ukuran teks standar, sans-serif */
-    font-family: 'Roboto', 'Open Sans', sans-serif; /* Font modern, fallback ke sans-serif */
-    font-weight: bold; /* Bold untuk emphasis */
-    border-radius: 6px; /* Sudut melengkung ringan, sesuai tombol situs */
+    padding: 12px 24px; /* Padding untuk ukuran nyaman */
+    font-size: 16px; /* Ukuran teks konsisten dengan tema */
+    font-family: 'Poppins', sans-serif; /* Font Poppins, sesuai website */
+    font-weight: 500; /* Sedikit bold untuk emphasis */
+    border-radius: 5px; /* Sudut melengkung, sesuai tombol lain */
     cursor: pointer; /* Pointer saat hover */
-    text-decoration: none; /* Hapus underline jika <a> */
-    display: inline-block; /* Agar bisa center atau align */
-    transition: all 0.3s ease; /* Efek smooth untuk hover */
+    display: inline-block; /* Untuk centering atau alignment */
+    text-align: center;
+    width: 100%; /* Lebar penuh di dalam product-card */
+    margin-top: 15px; /* Jarak dari harga */
+    transition: all 0.3s ease; /* Transisi halus untuk hover */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan ringan untuk depth */
 }
 
-.btn-beli-sekarang:hover {
+.btn-whatsapp:hover {
     background-color: #218838; /* Hijau lebih gelap saat hover */
-    transform: translateY(-1px); /* Efek lift ringan */
+    transform: translateY(-2px); /* Efek lift ringan */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Bayangan lebih kuat */
 }
 
-.btn-beli-sekarang:active {
+.btn-whatsapp:active {
     transform: translateY(0); /* Kembali ke posisi saat klik */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+    .btn-whatsapp {
+        padding: 10px 20px; /* Padding sedikit lebih kecil di mobile */
+        font-size: 14px; /* Teks lebih kecil untuk mobile */
+    }
 }
     .product-card {
         margin: 5px;
@@ -1143,6 +1153,7 @@ a:focus {
   outline: 2px solid var(--accent-color);
   outline-offset: 2px;
 }
+
 
 
 
