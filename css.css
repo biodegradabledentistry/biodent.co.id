@@ -608,45 +608,74 @@ h3::after {
   gap: 30px;
   margin-top: 50px;
 }
+/* Import font jika diperlukan (opsional, tambahkan di HTML <head>) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+/* Styling untuk Product Card */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.product-card span {
+    background-color: #4CAF50; /* Hijau untuk label "Baru" */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.product-card h3, .product-card p {
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Styling untuk Tombol Beli Sekarang */
 .btn-buy-now {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #4CAF50; /* Warna hijau sesuai tema ramah lingkungan */
-  color: #FFFFFF; /* Teks putih untuk kontras */
-  font-family: 'Poppins', sans-serif; /* Ganti dengan font yang digunakan website */
-  font-size: 16px;
-  font-weight: 500;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 8px; /* Sudut membulat sesuai tombol lain */
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Efek hover halus */
-  border: none;
-  cursor: pointer;
+    display: inline-block;
+    padding: 12px 24px; /* Lebih besar untuk tampilan menarik */
+    background-color: #4CAF50; /* Hijau tema ramah lingkungan */
+    color: #FFFFFF !important; /* Putih untuk kontras, !important untuk override default */
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none; /* Hilangkan garis bawah default */
+    border-radius: 8px; /* Sudut membulat seperti tombol "Pelajari Lebih Lanjut" */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
 .btn-buy-now:hover {
-  background-color: #45a049; /* Warna hijau sedikit lebih gelap saat hover */
-  transform: translateY(-2px); /* Efek sedikit naik saat hover */
+    background-color: #45a049; /* Hijau lebih gelap saat hover */
+    transform: translateY(-2px); /* Efek naik halus */
+    color: #FFFFFF !important;
 }
 
 .btn-buy-now:active {
-  transform: translateY(0); /* Kembali ke posisi awal saat klik */
+    transform: translateY(0);
 }
 
-/* Untuk memastikan penempatan tombol sejajar di dalam card */
-.product-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background-color: #FFFFFF;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan halus */
-  text-align: center;
-}
-
-.product-card .btn-buy-now {
-  margin-top: 15px; /* Jarak dari elemen di atas tombol */
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+    .btn-buy-now {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    .product-card {
+        margin: 5px;
+        padding: 15px;
+    }
 }
 .product-card {
   background: white;
@@ -1153,6 +1182,7 @@ a:focus {
   outline: 2px solid var(--accent-color);
   outline-offset: 2px;
 }
+
 
 
 
