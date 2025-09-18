@@ -168,9 +168,9 @@
         <div class="product-price">
           <span class="current-price">Rp25.000</span>
         </div>
-      <button class="btn-whatsapp" onclick="pesanWhatsApp('Saliva Ejector Bioplastik', '25000')">
-   Beli Sekarang
-</button>
+    <a href="javascript:void(0)" class="btn-beli" onclick="pesanWhatsApp('Saliva Ejector Bioplastik', 'Rp25.000')">
+  Beli Sekarang
+</a>
       </div>
       <div class="product-card">
         <div class="product-badge">Baru</div>
@@ -350,32 +350,18 @@
       </div>
     </div>
   </footer>
-
-
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".add-to-cart");
-
-    buttons.forEach((btn) => {
-      btn.addEventListener("click", function () {
-        const productCard = btn.closest(".product-card");
-        const productName = productCard.querySelector("h4").innerText;
-        const productPrice = productCard.querySelector(".current-price").innerText;
-
-        // Nomor WA tujuan (ganti dengan nomor Anda)
-        const phoneNumber = "6281361790748"; 
-
-        const message = `Halo, saya ingin memesan:\n\n🛒 *${productName}*\n💵 Harga: ${productPrice}\n\nMohon informasi lebih lanjut.`;
-        const encodedMessage = encodeURIComponent(message);
-
-        window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
-      });
-    });
-  });
+  function pesanWhatsApp(nama, harga) {
+    const nomor = "6281234567890"; // ganti nomor WA kamu
+    const pesan = `Halo, saya ingin memesan:\n\n🛒 *${nama}*\n💵 Harga: ${harga}\n\nMohon informasi lebih lanjut.`;
+    const url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
+    window.open(url, "_blank");
+  }
 </script>
 
 </body>
 </html>
+
 
 
 
