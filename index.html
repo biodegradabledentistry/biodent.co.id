@@ -150,7 +150,9 @@
           <span class="current-price">Rp 000</span>
           
         </div>
-        <button class="add-to-cart">Tambah ke Keranjang</button>
+        <button class="btn-whatsapp" onclick="pesanWhatsApp('Impression Tray', '000')">
+  Tambah ke Keranjang
+</button>
       </div>
       <div class="product-card">
         <img src="produk1.png" alt="Product 2">
@@ -166,7 +168,9 @@
         <div class="product-price">
           <span class="current-price">Rp25.000</span>
         </div>
-        <button class="add-to-cart">Tambah ke Keranjang</button>
+      <button class="btn-whatsapp" onclick="pesanWhatsApp('Saliva Ejector Bioplastik', '25000')">
+  Tambah ke Keranjang
+</button>
       </div>
       <div class="product-card">
         <div class="product-badge">Baru</div>
@@ -184,7 +188,9 @@
           <span class="current-price">Rp 000</span>
          
         </div>
-        <button class="add-to-cart">Tambah ke Keranjang</button>
+       <button class="btn-whatsapp" onclick="pesanWhatsApp('Cheek Retractor', '000')">
+  Tambah ke Keranjang
+</button>
       </div>
     </div>
     <div style="text-align: center; margin-top: 40px;">
@@ -350,8 +356,18 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
   <script src="javascript.js"></script>
+  <script>
+  function pesanWhatsApp(nama, harga) {
+    const nomor = "6281361790748"; // ganti dengan nomor WhatsApp kamu
+    const pesan = `Halo BioDent, saya ingin memesan produk *${nama}* dengan harga Rp ${harga}. Mohon info lebih lanjut.`;
+    const url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
+    window.open(url, "_blank");
+  }
+</script>
+
 </body>
 </html>
+
 
 
 
